@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script src="script.js"></script>
+		<link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+		<link href='http://fonts.googleapis.com/css?family=Gilda+Display' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Kreon:400,700' rel='stylesheet' type='text/css'>
+		<title>{{ name }} | {{ pageName }}</title>
+	</head>
+	<body>
+	{% include "top.html" %}
+	<div id="middle">
+		{% for users in users %}
+		<ol>
+			{% if users.user == null %}
+				<li><p> "{{ users.content }}"</p><br /><p class="person"> - Anonymous </p></li>
+			{% else %}
+				<li><p> "{{ users.content }}"</p><br /><p class="person"> - {{users.user}} </p></li>
+			{% endif %}
+		</ol>
+		{% endfor %}
+	</div>
+	</body>
+</html>

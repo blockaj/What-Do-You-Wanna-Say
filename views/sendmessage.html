@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title>{{ name }} | {{ pageName }}</title>
+		<link href='http://fonts.googleapis.com/css?family=Kreon:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<link href='http://fonts.googleapis.com/css?family=Gilda+Display' rel='stylesheet' type='text/css'>
+		<script src="script.js"></script>
+	</head>
+	<body>
+	{% include "top.html" %}
+	<div id="middle">
+		<form method="post" action="/sent_message">
+			<input type="text" name="message[name]" placeholder="Name">
+			<textarea name="message[content]" placeholder="Your message here..."></textarea>
+			<input type="submit">
+		</form>
+	</div>
+	</body>
+</html>

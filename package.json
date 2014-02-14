@@ -1,0 +1,13 @@
+{
+	"name": "MathChat",
+	"description": "A collaborative tool for mathematicians.",
+	"version": "0.0.0",
+	"dependencies": {
+		"express": "*",
+		"socket.io": "*",
+		"nunjucks": "*",
+		"less": "*",
+		"mongoose": "*",
+		"mongodb": "*"
+	}
+}
